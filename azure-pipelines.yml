@@ -1,13 +1,5 @@
 # Starter pipeline
-- task: ContrastIntegration@2
-  inputs:
-    ContrastService: 'ContrastApp2PKellyOrg'
-    Application: '4a36ffcd-0a25-491c-96b0-d860427ac53b'
-    CriticalLimit: '0'
-    HighLimit: '0'
-    MediumLimit: '0'
-    LowLimit: '100'
-    NoteLimit: '100'
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -20,6 +12,16 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+
+- task: ContrastIntegration@2
+  inputs:
+    ContrastService: 'ContrastApp2PKellyOrg'
+    Application: '4a36ffcd-0a25-491c-96b0-d860427ac53b'
+    CriticalLimit: '0'
+    HighLimit: '0'
+    MediumLimit: '0'
+    LowLimit: '100'
+    NoteLimit: '100'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
